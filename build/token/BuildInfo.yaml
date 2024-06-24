@@ -1,0 +1,30 @@
+---
+compiled_package_info:
+  package_name: token
+  address_alias_instantiation:
+    sender: 0000000000000000000000000000000000000000000000000000000000c0ffee
+    std: "0000000000000000000000000000000000000000000000000000000000000001"
+    sui: "0000000000000000000000000000000000000000000000000000000000000002"
+    token: "0000000000000000000000000000000000000000000000000000000000000000"
+  source_digest: 761A74106DC5BE5E1545EFF397D2DDE377A19F08F35527BDE06040BD2384D31A
+  build_flags:
+    dev_mode: false
+    test_mode: false
+    generate_docs: false
+    install_dir: ~
+    force_recompilation: false
+    lock_file: "./Move.lock"
+    fetch_deps_only: false
+    skip_fetch_latest_git_deps: false
+    default_flavor: sui
+    default_edition: ~
+    deps_as_root: false
+    silence_warnings: false
+    warnings_are_errors: false
+    additional_named_addresses: {}
+    lint_flag:
+      no_lint: false
+      lint: false
+dependencies:
+  - MoveStdlib
+  - Sui
