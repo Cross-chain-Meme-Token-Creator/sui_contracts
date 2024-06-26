@@ -1,6 +1,6 @@
 module token::token {
     //libraries
-    use sui::url::{ Self, Url };
+    use sui::url::{ Self };
     use sui::coin::{ Self };
     use sui::address::{ Self };
     
@@ -17,12 +17,11 @@ module token::token {
 
     //implements
     fun init(witness: TOKEN, ctx: &mut TxContext) {
-        let icon_url : Option<Url>;
         let template_icon_url = TEMPLATE_ICON_URL;
-        if (vector::is_empty(&template_icon_url)) {
-            icon_url = option::none();
+        let icon_url = if (vector::is_empty(&template_icon_url)) {
+            option::none()
         } else {
-            icon_url = option::some(url::new_unsafe_from_bytes(template_icon_url));
+            option::some(url::new_unsafe_from_bytes(template_icon_url))
         };
 
         let (mut treasury_cap, metadata) = coin::create_currency( 

@@ -6,7 +6,7 @@ compiled_package_info:
     std: "0000000000000000000000000000000000000000000000000000000000000001"
     sui: "0000000000000000000000000000000000000000000000000000000000000002"
     token: "0000000000000000000000000000000000000000000000000000000000000000"
-  source_digest: 761A74106DC5BE5E1545EFF397D2DDE377A19F08F35527BDE06040BD2384D31A
+  source_digest: D7C28EE51EF3B3AAED586ACE652C0937580A98D5710D6F84A6111B555616ACB2
   build_flags:
     dev_mode: false
     test_mode: false
@@ -15,7 +15,7 @@ compiled_package_info:
     force_recompilation: false
     lock_file: "./Move.lock"
     fetch_deps_only: false
-    skip_fetch_latest_git_deps: false
+    skip_fetch_latest_git_deps: true
     default_flavor: sui
     default_edition: ~
     deps_as_root: false
