@@ -2,7 +2,6 @@ module token::token {
     //libraries
     use sui::url::{ Self };
     use sui::coin::{ Self };
-    use sui::address::{ Self };
     
     //structs
     public struct TOKEN has drop {}
@@ -34,10 +33,15 @@ module token::token {
         ctx
         );
 
-        transfer::public_freeze_object(metadata);
-        
         coin::mint_and_transfer(&mut treasury_cap, TEMPLATE_TOTAL_SUPPLY, tx_context::sender(ctx), ctx);
-        transfer::public_transfer(treasury_cap, address::from_u256(0));
+
+        transfer::public_freeze_object(metadata);
+        transfer::public_freeze_object(treasury_cap);
+    }
+
+    #[test_only]
+    public fun init_for_testing(ctx: &mut TxContext) {
+        token::init(TOKEN {}, ctx);
     }
 }
 
