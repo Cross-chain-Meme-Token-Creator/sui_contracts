@@ -10,7 +10,7 @@ module token::token_test {
 
     //tests
     #[test]
-    public fun test_mint() {
+    public fun test_init() {
         let sender = @0xcafe;
         let mut scenario = test_scenario::begin(sender);
         {
