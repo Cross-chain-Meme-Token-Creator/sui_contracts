@@ -12,12 +12,12 @@ module token::token_test {
     #[test]
     public fun test_init() {
         let sender = @0xcafe;
-        let validator = @0xc0ffee;
+        let checker = @0xc0ffee;
         let mut scenario = test_scenario::begin(sender);
         {
             token::init_for_testing(scenario.ctx());         
         };
-        scenario.next_tx(validator);
+        scenario.next_tx(checker);
         {
             let coin = scenario.take_from_address<Coin<TOKEN>>(sender);
             assert!(coin.value() == TEMPLATE_TOTAL_SUPPLY);
