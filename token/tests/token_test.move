@@ -5,8 +5,10 @@ module token::token_test {
     use sui::coin::{ Coin };
     use token::token::{ Self, TOKEN };
 
+    //templates
     const TEMPLATE_TOTAL_SUPPLY: u64 = 10000000000000000;
 
+    //tests
     #[test]
     public fun test_mint() {
         let sender = @0xcafe;
