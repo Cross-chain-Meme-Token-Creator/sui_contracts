@@ -1,5 +1,5 @@
 #[test_only]
-module token::token_test {
+module token::token_tests {
     //libraries
     use sui::test_scenario::{ Self };
     use sui::coin::{ Coin };
