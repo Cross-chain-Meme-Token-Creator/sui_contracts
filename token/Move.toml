@@ -7,4 +7,3 @@ Sui = { local = "../sui-framework/packages/sui-framework" }
 
 [addresses]
 token = "0x0"
-sender = "0xc0ffee"

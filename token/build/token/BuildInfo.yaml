@@ -2,18 +2,17 @@
 compiled_package_info:
   package_name: token
   address_alias_instantiation:
-    sender: 0000000000000000000000000000000000000000000000000000000000c0ffee
     std: "0000000000000000000000000000000000000000000000000000000000000001"
     sui: "0000000000000000000000000000000000000000000000000000000000000002"
     token: "0000000000000000000000000000000000000000000000000000000000000000"
-  source_digest: 3FCB42AA981FA0A270A13B78EA524AB558D9B05BC9A0F1F15BC0159951892545
+  source_digest: 3A58069E3C01632A92956C64AA0971B72A6788BD465EE3444DE4BA54B331A3F7
   build_flags:
-    dev_mode: false
-    test_mode: false
+    dev_mode: true
+    test_mode: true
     generate_docs: false
     install_dir: ~
     force_recompilation: false
-    lock_file: "./Move.lock"
+    lock_file: ~
     fetch_deps_only: false
     skip_fetch_latest_git_deps: false
     default_flavor: sui
@@ -21,6 +20,7 @@ compiled_package_info:
     deps_as_root: false
     silence_warnings: false
     warnings_are_errors: false
+    json_errors: false
     additional_named_addresses: {}
     lint_flag:
       no_lint: false
